@@ -1,0 +1,216 @@
+/* Global & Body */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e50914; /* Netflix-red inspired */
+}
+
+.navbar button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.navbar .primary {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.navbar .secondary {
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+}
+
+/* Form Cards */
+.form-card, .add-sub-card {
+  background-color: #1f1f1f;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.form-card h2, .add-sub-card h3 {
+  margin-bottom: 20px;
+  color: #e50914;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button.primary {
+  background-color: #e50914;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button.primary:hover {
+  background-color: #ff1a30;
+}
+
+button.secondary {
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  transition: 0.2s;
+}
+
+button.secondary:hover {
+  background-color: #333;
+}
+
+/* Alerts */
+.alert {
+  color: #ff4c4c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #4caf50;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #e50914;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.subscriptions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.subscription-card {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  min-width: 220px;
+  max-width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subscription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+}
+
+.subscription-card.expiring {
+  border: 2px solid #ff4c4c;
+}
+
+.subscription-card h4 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.subscription-card p {
+  margin: 5px 0;
+}
+
+.sub-logo {
+  max-width: 100%;
+  max-height: 60px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.delete-btn {
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.delete-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscriptions-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
